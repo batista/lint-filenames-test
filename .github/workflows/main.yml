@@ -7,7 +7,7 @@ jobs:
     steps:
     - name: Validating folders
       id: lint-filenames
-      uses: batista/lint-filenames@master
+      uses: batista/lint-filenames@3e5e3d444c91eb47ba157868f0ec4af9af2a3057
       with:
         path: "./my-test-folder"
         pattern: "^\\d{14}_ch\\d{1,}_.+\\.php$"
