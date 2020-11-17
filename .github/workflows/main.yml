@@ -12,7 +12,7 @@ jobs:
       uses: batista/lint-filenames@v1
       with:
         path: "./my-test-folder"
-        pattern: "^\\d{14}_ch\\d{1,}_.+\\.php$"
+        pattern: "^(\\.gitkeep|\\d{14}_ch\\d{1,}_.+\\.php)$"
 
     # Use the output from the `lint-filenames` step
     - name: Get the number of analyzed files
