@@ -5,12 +5,15 @@ jobs:
     runs-on: ubuntu-latest
     name: Lets Validate our test folder
     steps:
+    - uses: actions/checkout@v2
+
     - name: Validating folders
       id: lint-filenames
       uses: batista/lint-filenames@v1
       with:
         path: "./my-test-folder"
         pattern: "^\\d{14}_ch\\d{1,}_.+\\.php$"
+
     # Use the output from the `lint-filenames` step
     - name: Get the number of analyzed files
       run: echo "The number of files analysed was ${{ steps.lint-filenames.outputs.total-files-analyzed }}"
