@@ -9,7 +9,7 @@ jobs:
 
     - name: Validating folders
       id: lint-filenames
-      uses: batista/lint-filenames@v1
+      uses: batista/lint-filenames@master
       with:
         path: "./my-test-folder"
         pattern: "^(\\.gitkeep|\\d{14}_ch\\d{1,}_.+\\.php)$"
